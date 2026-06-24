@@ -1,0 +1,189 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: #f8f8f8;
+    color: #333;
+    line-height: 1.6;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+a{
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+}
+
+.container{
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+header{
+    background: #111;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+}
+
+.logo{
+    color: #B76E79;
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.nav-links{
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a{
+    color: white;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.nav-links a:hover{
+    color: #B76E79;
+}
+
+.nav-links a.active{
+    color: #B76E79;
+}
+
+.btn-nav{
+    background: #B76E79;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.btn-nav:hover{
+    background: white;
+}
+
+
+/* HERO */
+.about-hero {
+  height: 300px;
+  background: url('Salon_hero.image.avif') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+}
+
+.overlay {
+  background: rgba(0,0,0,0.5);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* CONTENT */
+.about-content {
+    background: #1E1E1E;
+    color: white;
+  padding: 60px 20%;
+  line-height: 1.6;
+}
+
+.about-text {
+  margin-bottom: 40px;
+}
+
+.about-text h2 {
+  color: #B76E79;
+}
+
+/* TEAM */
+.team {
+  background: #B76E79;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.team-grid {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 30px;
+  flex-wrap: wrap;
+}
+
+.team-member {
+  width: 200px;
+}
+
+.avatar {
+  width: 120px;
+  height: 120px;
+  background: #ccc;
+  border-radius: 50%;
+  margin: 0 auto 10px;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #111;
+  color: white;
+}
+
+footer{
+    background: #111;
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.footer-content h3{
+    color: #B76E79;
+    margin-bottom: 15px;
+}
+
+.footer-content p{
+    margin-bottom: 15px;
+}
+
+.footer-links{
+    margin: 25px 0;
+}
+
+.footer-links a{
+    color: white;
+    margin: 0 10px;
+    transition: 0.3s;
+}
+
+.footer-links a:hover{
+    color: #B76E79;
+}
+
+.copyright{
+    margin-top: 20px;
+    font-size: 0.9rem;
+}

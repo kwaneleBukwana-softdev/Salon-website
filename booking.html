@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Appointment | Elegant Touch Salon</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- NAVIGATION -->
+<header>
+    <nav class="navbar">
+
+        <div class="logo">
+            Elegant Touch Salon
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="booking.html">Book Appointment</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+
+        <a href="services.html" class="btn-nav">
+            View Services
+        </a>
+
+    </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero" style="height: 45vh;">
+    <div class="hero-content">
+        <h1>Book Your Appointment</h1>
+        <p>Schedule your beauty experience with Elegant Touch Salon</p>
+    </div>
+</section>
+
+<!-- BOOKING FORM -->
+<section class="about-preview">
+
+    <div class="container">
+
+        <h2>Appointment Form</h2>
+
+        <p>Fill in your details below and we will confirm your booking.</p>
+
+        <form id="bookingForm" class="booking-form">
+
+            <div class="form-group">
+                <label>Full Name</label>
+                <input type="text" id="fullName" placeholder="Enter your full name" required>
+            </div>
+
+            <div class="form-group">
+                <label>Phone Number</label>
+                <input type="tel" id="phone" placeholder="e.g. 0712345678" required>
+            </div>
+
+            <div class="form-group">
+                <label>Email Address</label>
+                <input type="email" id="email" placeholder="e.g. you@example.com">
+            </div>
+
+            <div class="form-group">
+                <label>Select Service</label>
+                <select id="service" required>
+                    <option value="">-- Choose a Service --</option>
+                    <option value="Haircut & Styling">Haircut & Styling</option>
+                    <option value="Braiding & Protective Styles">Braiding & Protective Styles</option>
+                    <option value="Hair Treatments">Hair Treatments</option>
+                    <option value="Wash & Blow Dry">Wash & Blow Dry</option>
+                    <option value="Makeup Services">Makeup Services</option>
+                    <option value="Manicure & Pedicure">Manicure & Pedicure</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Date</label>
+                <input type="date" id="date" required>
+            </div>
+
+            <div class="form-group">
+                <label>Time</label>
+                <input type="time" id="time" required>
+            </div>
+
+            <div class="form-group">
+                <label>Special Notes</label>
+                <textarea id="notes" rows="4" placeholder="Any special requests?"></textarea>
+            </div>
+
+            <button type="submit" class="btn-primary">
+                Confirm Booking
+            </button>
+
+        </form>
+
+        <div id="confirmationMessage" style="display:none; margin-top:20px; color:#B76E79; font-weight:600;">
+            Your booking has been submitted successfully!
+        </div>
+
+    </div>
+
+</section>
+
+<!-- CTA -->
+<section class="cta">
+
+    <div class="container">
+
+        <h2>We Can’t Wait To See You</h2>
+
+        <p>
+            Your beauty journey starts with one appointment.
+        </p>
+
+        <a href="services.html" class="btn-primary">
+            View Services
+        </a>
+
+    </div>
+
+</section>
+
+<!-- FOOTER -->
+<footer>
+
+    <div class="footer-content">
+
+        <h3>Elegant Touch Salon</h3>
+
+        <p>Luxury. Beauty. Confidence.</p>
+
+        <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="services.html">Services</a>
+            <a href="booking.html">Book</a>
+            <a href="contact.html">Contact</a>
+        </div>
+
+        <p class="copyright">
+            © 2026 Elegant Touch Salon. All Rights Reserved.
+        </p>
+
+    </div>
+
+</footer>
+
+<!-- SIMPLE JAVASCRIPT -->
+<script>
+document.getElementById("bookingForm").addEventListener("submit", function(e){
+    e.preventDefault();
+
+    // Collect form data (future database integration point)
+    const bookingData = {
+        fullName: document.getElementById("fullName").value,
+        phone: document.getElementById("phone").value,
+        email: document.getElementById("email").value,
+        service: document.getElementById("service").value,
+        date: document.getElementById("date").value,
+        time: document.getElementById("time").value,
+        notes: document.getElementById("notes").value
+    };
+
+    console.log("Booking Submitted:", bookingData);
+
+    // Show confirmation message
+    document.getElementById("confirmationMessage").style.display = "block";
+
+    // Reset form
+    document.getElementById("bookingForm").reset();
+});
+</script>
+
+</body>
+</html>
