@@ -545,3 +545,58 @@ footer{
         grid-template-columns: 1fr;
     }
 }
+
+/* =========================
+   HERO ANIMATIONS
+========================= */
+
+.hero-content h1{
+    opacity: 0;
+    animation: fadeUp 1s ease forwards;
+}
+
+.hero-content p{
+    opacity: 0;
+    animation: fadeUp 1s ease forwards;
+    animation-delay: 0.5s;
+}
+
+.hero-buttons{
+    opacity: 0;
+    animation: fadeUp 1s ease forwards;
+    animation-delay: 1s;
+}
+
+/* Animation Keyframes */
+
+@keyframes fadeUp{
+    from{
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero-content{
+    animation: float 5s ease-in-out infinite;
+}
+
+@keyframes float{
+
+    0%{
+        transform: translateY(0);
+    }
+
+    50%{
+        transform: translateY(-10px);
+    }
+
+    100%{
+        transform: translateY(0);
+    }
+
+}
